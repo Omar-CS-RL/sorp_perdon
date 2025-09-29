@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Gabriela 💌</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #FFD93D, #FFA500, #FF6B9D);
+      font-family: "Georgia", serif;
+      overflow: hidden;
+      position: relative;
+    }
+    /* Girasoles de fondo */
+    .sunflower {
+      position: absolute;
+      font-size: 80px;
+      opacity: 0.2;
+      animation: sway 4s ease-in-out infinite;
+    }
+    @keyframes sway {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+    .envelope {
+      position: relative;
+      width: 350px;
+      height: 220px;
+      background: linear-gradient(135deg, #ff6b9d, #ff4b6e);
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      transition: transform 0.3s, box-shadow 0.3s;
+      z-index: 10;
+    }
+    .envelope:hover {
+      transform: scale(1.08) rotate(1deg);
+      box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+    }
+    .flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 175px solid transparent;
+      border-right: 175px solid transparent;
+      border-bottom: 110px solid #ff99ac;
+      transform-origin: top;
+      transition: transform 1.2s ease;
+      z-index: 2;
+    }
+    .letter {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      width: 310px;
+      height: 450px;
+      background: linear-gradient(to bottom, #fffef7, #fff9e6);
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      padding: 30px 25px;
+      text-align: center;
+      transform: translateY(180px);
+      opacity: 0;
+      transition: transform 1.2s ease, opacity 1.2s ease;
+      z-index: 1;
+      overflow-y: auto;
+    }
+    .letter-header {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      font-size: 2rem;
+    }
+    .letter h1 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #ff4b6e;
+      font-family: "Brush Script MT", cursive;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+    .letter p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: #444;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    .letter .signature {
+      margin-top: 25px;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #ff4b6e;
+      text-align: right;
+    }
+    .open .flap {
+      transform: rotateX(180deg);
+    }
+    .open .letter {
+      transform: translateY(-50px);
+      opacity: 1;
+    }
+    /* corazones y girasoles flotando */
+    .floating {
+      position: absolute;
+      bottom: -50px;
+      font-size: 20px;
+      animation: floatUp 8s linear infinite;
+    }
+    @keyframes floatUp {
+      from { transform: translateY(0) rotate(0deg); opacity: 1; }
+      to { transform: translateY(-120vh) rotate(360deg); opacity: 0; }
+    }
+    .instruction {
+      position: absolute;
+      bottom: 30px;
+      font-size: 1.1rem;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Girasoles decorativos de fondo -->
+  <div class="sunflower" style="top: 10%; left: 15%;">🌻</div>
+  <div class="sunflower" style="top: 20%; right: 10%;">🌻</div>
+  <div class="sunflower" style="bottom: 15%; left: 8%;">🌻</div>
+  <div class="sunflower" style="bottom: 25%; right: 18%;">🌻</div>
+
+  <div class="envelope" id="envelope">
+    <div class="flap"></div>
+    <div class="letter">
+      <div class="letter-header">
+        <span>🌻</span>
+        <span>💖</span>
+        <span>🌻</span>
+      </div>
+      <h1>Para mi Gabriela</h1>
+      <p>
+        Mi amor, sé que cometí un error que te lastimó, y no encuentro palabras que puedan expresar cuánto lo lamento, 
+        Eres lo más lindo que tengo en mi vida y quiero que sigas haciendome muy feliz u.u 💕.
+      </p>
+      <p>
+        Cada día que pasa me doy cuenta de lo afortunado que soy de tenerte a mi lado. 
+        Tu sonrisa ilumina mis días como el sol ilumina a los girasoles, y tu amor me hace ser una mejor persona cada día.
+      </p>
+      <p>
+        Te prometo que aprenderé de mis errores y haré todo lo posible para no volver a hacerte sentir así de mal.
+        Quiero ser el motivo de tu felicidad, no de tus lágrimas, y creo que te hago feliz pero a veces cometo errores.
+      </p>
+      <p>
+        Perdóname, mi niña hermosa. Te amo más de lo que las palabras pueden decir, 
+        y espero poder demostrártelo cada día por el resto de nuestros días.
+      </p>
+      <div class="signature">
+        Con todo mi amor,<br>
+        Tu curita al corazón 🌻💕
+      </div>
+    </div>
+  </div>
+
+  <div class="instruction">👆 Haz clic en el sobre 💌</div>
+
+  <script>
+    const envelope = document.getElementById("envelope");
+    envelope.addEventListener("click", () => {
+      envelope.classList.toggle("open");
+    });
+    
+    // Elementos flotantes alternando entre corazones y girasoles
+    const floatingElements = ["💖", "🌻", "💕", "🌻", "💗"];
+    let elementIndex = 0;
+    
+    function createFloatingElement() {
+      const element = document.createElement("div");
+      element.classList.add("floating");
+      element.innerHTML = floatingElements[elementIndex];
+      elementIndex = (elementIndex + 1) % floatingElements.length;
+      
+      element.style.left = Math.random() * 100 + "vw";
+      element.style.fontSize = (25 + Math.random() * 35) + "px";
+      element.style.animationDuration = (6 + Math.random() * 4) + "s";
+      
+      document.body.appendChild(element);
+      setTimeout(() => element.remove(), 10000);
+    }
+    
+    setInterval(createFloatingElement, 500);
+  </script>
+</body>
+</html>
